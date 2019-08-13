@@ -2,3 +2,12 @@ node_modules
 .sass-cache
 bower_components
 vendor
+._*
+css/._*
+images/._*
+img/._*
+img/.BridgeSort
+js/._*
+pages/._*
+scss/._*
+
