@@ -396,15 +396,16 @@ footer {
 
 /* Portfolio Navigation */
 .navigation {
-    margin: 10px;
+    margin: 0px;
 
 }
 .navigation a {
    display:inline;
    font-family: "Avenir-Medium";
    color: rgb(235, 235, 235);
-   font-size: 3rem;
+   font-size: 2rem;
    letter-spacing: .550em;
+   line-height: 2.5rem;
 }
 
 .navigation ul {
