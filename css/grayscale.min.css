@@ -17,7 +17,7 @@
 
 #mainNav .navbar-brand {
     color: rgb(255, 255, 255);
-    font: avenir-medium;
+    font: "Avenir-Medium";
     font-weight: 700;
     padding: .9rem 0
 }
@@ -98,7 +98,7 @@
 }
 
 .masthead h1 {
-    font-family: 'avenir';
+    font: "Avenir-Medium";
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: .8rem;
@@ -251,7 +251,7 @@
 }
 
 body {
-    font-family: avenir-medium;
+    font: "Avenir-Medium";
     background-color:#444;
     letter-spacing: .0625em;
 }
@@ -293,7 +293,7 @@ footer {
 }
 
 .portwrapper a img {
-    height:100%; 
+    height:100%;
     width:100%;
     object-fit:cover;}
   a:before, a:after{
@@ -308,7 +308,7 @@ footer {
     height:100%;
     background:rgba(250, 121, 35, 0.495);
   }
-  
+
 .portwrapper a:after{
     content:attr(data-title);
     font-size:24px;
@@ -318,15 +318,15 @@ footer {
     color:#fff;
     text-transform:uppercase;
   }
-  
+
 .portwrapper a:hover:before, a:hover:after{
     opacity:1;
   }
-  
+
 
 /*individual portfolio */
 
-  
+
 
 
 @import url(https://fonts.googleapis.com/css?family=Sarala:400,700);
@@ -341,7 +341,7 @@ footer {
     }
 
     .wrapper a img {
-    height:100%; 
+    height:100%;
     width:100%;
     object-fit:cover;}
     .wrapper a:before, a:after{
@@ -395,12 +395,12 @@ footer {
 
 /* Portfolio Navigation */
 .navigation {
-    margin: 10px; 
-   
+    margin: 10px;
+
 }
 .navigation a {
    display:inline;
-   font-family: avenir-medium;
+   font: "Avenir-Medium";
    color: rgb(235, 235, 235);
    font-size: 3rem;
    letter-spacing: .550em;
@@ -411,7 +411,7 @@ footer {
     margin: 0;
     padding: 0;
   }
-  
+
   .navigation li {
     display: inline;
   }
