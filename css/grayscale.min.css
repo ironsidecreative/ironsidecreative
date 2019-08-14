@@ -17,7 +17,7 @@
 
 #mainNav .navbar-brand {
     color: rgb(255, 255, 255);
-    font: "Avenir-Medium";
+    font-family: "Avenir-Medium";
     font-weight: 700;
     padding: .9rem 0
 }
@@ -98,7 +98,7 @@
 }
 
 .masthead h1 {
-    font: "Avenir-Medium";
+    font-family: "Avenir-Medium";
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: .8rem;
@@ -251,7 +251,7 @@
 }
 
 body {
-    font: "Avenir-Medium";
+    font-family: "Avenir-Medium";
     background-color:#444;
     letter-spacing: .0625em;
 }
@@ -400,7 +400,7 @@ footer {
 }
 .navigation a {
    display:inline;
-   font: "Avenir-Medium";
+   font-family: "Avenir-Medium";
    color: rgb(235, 235, 235);
    font-size: 3rem;
    letter-spacing: .550em;
