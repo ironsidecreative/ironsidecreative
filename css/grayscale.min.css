@@ -251,8 +251,9 @@
 }
 
 body {
-    font-family: arial;
-    letter-spacing: .0625em
+    font-family: avenir-medium;
+    background-color:#444;
+    letter-spacing: .0625em;
 }
 
 a {
@@ -331,7 +332,6 @@ footer {
 @import url(https://fonts.googleapis.com/css?family=Sarala:400,700);
 
 .wrapper{font-size:0;}/*for inline block spacing*/
-body{font-family:avenir-medium; background:#444;}
 
 @media screen and (max-width: 992px) {
     .wrapper a{ display:inline-block;
