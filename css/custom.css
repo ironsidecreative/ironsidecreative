@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Avenir-Medium";
+    src: url("../fonts/Avenir-Medium.otf") format("opentype");
+}
 
 
 @media only screen and (max-width: 992px) {
