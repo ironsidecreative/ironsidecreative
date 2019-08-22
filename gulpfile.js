@@ -14,33 +14,33 @@ const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
 
 // Load package.json for banner
-const pkg = require('./package.json');
+// const pkg = require('./package.json');
 
 // Set the banner content
-const banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
-  ' */\n',
-  '\n'
-].join('');
+// const banner = ['/*!\n',
+//   ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+//   ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+//   ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
+//   ' */\n',
+//   '\n'
+// ].join('');
 
 // BrowserSync
-function browserSync(done) {
-  browsersync.init({
-    server: {
-      baseDir: "./"
-    },
-    port: 3000
-  });
-  done();
-}
+// function browserSync(done) {
+//   browsersync.init({
+//     server: {
+//       baseDir: "./"
+//     },
+//     port: 3000
+//   });
+//   done();
+// }
 
 // BrowserSync reload
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
-}
+// function browserSyncReload(done) {
+//   browsersync.reload();
+//   done();
+// }
 
 // Clean vendor
 function clean() {
@@ -81,16 +81,13 @@ function css() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
     .pipe(gulp.dest("./css"))
     .pipe(rename({
       suffix: ".min"
     }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest("./css"))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest("./css"));
+    // .pipe(browsersync.stream());
 }
 
 // JS task
@@ -101,27 +98,27 @@ function js() {
       '!./js/*.min.js'
     ])
     .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
+    // .pipe(header(banner, {
+    //   pkg: pkg
+    // }))
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js'))
-    .pipe(browsersync.stream());
+    .pipe(gulp.dest('./js'));
+    // .pipe(browsersync.stream());
 }
 
 // Watch files
-function watchFiles() {
-  gulp.watch("./scss/**/*", css);
-  gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
-  gulp.watch("./**/*.html", browserSyncReload);
-}
+// function watchFiles() {
+//   gulp.watch("./scss/**/*", css);
+//   gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
+//   gulp.watch("./**/*.html", browserSyncReload);
+// }
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
 const build = gulp.series(vendor, gulp.parallel(css, js));
-const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+// const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
@@ -129,5 +126,5 @@ exports.js = js;
 exports.clean = clean;
 exports.vendor = vendor;
 exports.build = build;
-exports.watch = watch;
+// exports.watch = watch;
 exports.default = build;

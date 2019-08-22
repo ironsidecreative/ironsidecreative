@@ -11,3 +11,5 @@ js/._*
 pages/._*
 scss/._*
 fonts/._*
+css/*.min.css
+js/*.min.js
